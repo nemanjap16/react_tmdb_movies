@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Wrapper = styled.div`
   background: ${(props) =>
@@ -50,7 +50,7 @@ export const Text = styled.div`
 
   p {
     font-size: var(--fontMed);
-  
+
     @media screen and (max-width: 720px) {
       font-size: var(--fontSmall);
     }
