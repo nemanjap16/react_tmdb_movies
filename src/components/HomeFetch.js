@@ -7,6 +7,8 @@ import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config';
 import HeroImage from './HeroImage';
 import Grid from './Grid';
 import Thumb from './Thumb';
+import Spinner from './Spinner';
+import SearchBar from './SearchBar';
 
 // Hook
 import { useHomeFetch } from '../hooks/useHomeFetch';
@@ -26,6 +28,7 @@ const HomeFetch = () => {
           text={state.results[0].overview}
         />
       ) : null}
+      <SearchBar />
       <Grid header="Popular Movies">
         {state.results.map((item, i) => (
           <Thumb
@@ -42,6 +45,7 @@ const HomeFetch = () => {
           </Thumb>
         ))}
       </Grid>
+      <Spinner />
     </>
   );
 };
