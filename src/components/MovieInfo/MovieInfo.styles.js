@@ -67,6 +67,10 @@ export const Text = styled.div`
     }
   }
 
+  h3 {
+    color: var(--green);
+  }
+
   h1 {
     @media screen and (max-width: 768px) {
       font-size: var(--fontBig);
