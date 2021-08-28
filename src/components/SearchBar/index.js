@@ -17,7 +17,7 @@ const SearchBar = ({ setSearchTerm }) => {
 
     const timer = setTimeout(() => {
       setSearchTerm(state);
-    }, 500);
+    }, 100);
 
     return () => clearTimeout(timer);
   }, [setSearchTerm, state]);
@@ -29,8 +29,11 @@ const SearchBar = ({ setSearchTerm }) => {
         <input
           type="text"
           placeholder="Search Movie"
-          onChange={(event) => setState(event.currentTarget.value)}
-          value={state}
+          //   onChange={(event) => setState(event.currentTarget.value)}
+          onKeyDown={(e) =>
+            e.key === 'Enter' && setState(e.currentTarget.value)
+          }
+          //   value={state}
         />
       </Content>
     </Wrapper>
