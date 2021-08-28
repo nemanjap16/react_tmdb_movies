@@ -1,11 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+// Global style
 import { GlobalStyle } from './GlobalStyle';
+// Components
+import Header from './components/Header';
+import HomeFetch from './components/HomeFetch';
 
 const App = () => (
-  <div>
-    Start here!
+  <Router>
+    <Header />
+    <HomeFetch />
     <GlobalStyle />
-  </div>
+  </Router>
 );
 
 export default App;

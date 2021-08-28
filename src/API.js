@@ -15,6 +15,7 @@ const defaultConfig = {
   },
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   fetchMovies: async (searchTerm, page) => {
     const endpoint = searchTerm
