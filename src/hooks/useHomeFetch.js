@@ -22,6 +22,7 @@ export const useHomeFetch = () => {
     try {
       setError(false);
       setLoading(true);
+
       const movies = await API.fetchMovies(searchTerm, page);
 
       setState((prevState) => ({
@@ -42,7 +43,7 @@ export const useHomeFetch = () => {
     if (!searchTerm) {
       const sessionState = isPersistedState('homeState');
       if (sessionState) {
-        setState(sessionStorage);
+        setState(sessionState);
         return;
       }
     }
