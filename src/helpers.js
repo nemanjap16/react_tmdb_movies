@@ -16,5 +16,5 @@ export const convertMoney = (money) => {
 
 export const isPersistedState = (stateName) => {
   const sessionState = sessionStorage.getItem(stateName);
-  return sessionStorage && JSON.parse(sessionState);
+  return sessionState && JSON.parse(sessionState);
 };
